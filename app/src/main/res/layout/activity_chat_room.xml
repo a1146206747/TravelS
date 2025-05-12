@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatRoomActivity">
+
+    <LinearLayout
+        android:id="@+id/bg_headline"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFBF69"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:background="#FFBF69"
+            android:onClick="onLeadingButtonClick"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/recivername"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:hint="TravelSence"
+            android:textSize="32dp" />
+        <ImageButton
+            android:id="@+id/btn_reciverFile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:background="#FFBF69"
+            android:onClick="onLeadingButtonClick"
+            app:srcCompat="@drawable/ic_baseline_person2_24" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msgAdapter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_headline"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#E3F2FD">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/uploadImageButton"
+            android:layout_width="31dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6.5dp"
+            android:layout_marginEnd="9.1dp"
+            android:layout_weight="1"
+            android:background="#E3F2FD"
+            app:cardCornerRadius="32.5dp"
+            android:onClick="uploadImage">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/baseline_add_to_photos_24" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/text_msg"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Type The Messages..."
+            android:paddingStart="13dp">
+
+        </EditText>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_sendMsg"
+            android:layout_width="45.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6.5dp"
+            android:layout_marginEnd="6.5dp"
+            android:background="@color/white"
+            app:cardCornerRadius="32.5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/baseline_arrow_right_24" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

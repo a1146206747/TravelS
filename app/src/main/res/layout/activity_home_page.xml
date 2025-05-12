@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/bg_headline"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFBF69"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_leading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek11"
+            android:onClick="onLeadingButtonClick"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:text="TravelSence" />
+        <ImageButton
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.7"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/lotout"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/btn_trailing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bg_body"
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bg_botline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_headline"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/text_WhenWillYou"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F9FAF2"
+            android:text="Where will your \nTravelSense take you?"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bg_botline"
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:background="#FFBF69"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/btn_map"
+            android:layout_width="92dp"
+            android:background="#FFBF69"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/vector_ek1"
+            android:onClick="mapButtonClick"/>
+
+        <ImageButton
+            android:id="@+id/btn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek3"
+            android:onClick="chatRoomButtonClick"/>
+
+        <ImageButton
+            android:id="@+id/btn_homePage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek5" />
+
+        <ImageButton
+            android:id="@+id/btn_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek7"
+            android:onClick="PlannerButtonClick"/>
+
+        <ImageButton
+            android:id="@+id/btn_moreDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFBF69"
+            app:srcCompat="@drawable/vector_ek9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bg_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#F9FAF2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_body">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:hint="Search..."
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_WhenWillYou" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F9FAF2"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
